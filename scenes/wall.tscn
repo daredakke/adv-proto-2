@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://by8tmk3or5jk7"]
+
+[node name="Wall" type="StaticBody2D"]
+collision_mask = 0

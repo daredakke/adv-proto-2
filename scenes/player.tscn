@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqk6nysibd2r"]
+
+[ext_resource type="Texture2D" uid="uid://c8n3h3k610jlv" path="res://assets/entities/pc.png" id="1_nx3s5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgi1b"]
+size = Vector2(45.3553, 45.3553)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+floor_stop_on_slope = false
+floor_constant_speed = true
+floor_max_angle = 0.872665
+floor_snap_length = 25.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -64)
+texture = ExtResource("1_nx3s5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -31.9289)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_dgi1b")
+
+[node name="InteractionPoint" type="Marker2D" parent="."]
+position = Vector2(0, -64)
