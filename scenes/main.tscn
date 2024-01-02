@@ -1,3 +1,27 @@
-[gd_scene format=3 uid="uid://d1fb8fmc64kxb"]
+[gd_scene load_steps=4 format=3 uid="uid://d1fb8fmc64kxb"]
+
+[ext_resource type="PackedScene" uid="uid://ncgd2ml5k4k8" path="res://scenes/levels/TestLevel.tscn" id="1_2q5bj"]
+[ext_resource type="PackedScene" uid="uid://bqk6nysibd2r" path="res://scenes/player.tscn" id="2_gn4rn"]
+[ext_resource type="PackedScene" uid="uid://bm3ak6u227tae" path="res://scenes/camera.tscn" id="3_fjrcb"]
 
 [node name="Main" type="Node2D"]
+
+[node name="TestLevel" parent="." instance=ExtResource("1_2q5bj")]
+position = Vector2(-19, 52)
+
+[node name="Player" parent="." instance=ExtResource("2_gn4rn")]
+position = Vector2(836, 688)
+
+[node name="Camera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_fjrcb")]
+position = Vector2(836, 624)
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+target = NodePath("../Player")
+offset_distance_x = 200.0
+offset_distance_y = 220.0
+speed_fast = 7.0
+speed_slow = 0.5
+position_reset_wait_time = 3.0
+
+[connection signal="player_moving" from="Player" to="Camera" method="_on_player_moving"]
+[connection signal="player_stopped" from="Player" to="Camera" method="_on_player_stopped"]

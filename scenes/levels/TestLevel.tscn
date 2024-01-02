@@ -1,11 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://ncgd2ml5k4k8"]
+[gd_scene load_steps=3 format=3 uid="uid://ncgd2ml5k4k8"]
 
+[ext_resource type="Texture2D" uid="uid://bvtbjky50pfrp" path="res://assets/clouds-bg.png" id="1_5wvej"]
 [ext_resource type="PackedScene" uid="uid://by8tmk3or5jk7" path="res://scenes/wall.tscn" id="1_h7xjw"]
 
 [node name="TestLevel" type="Node2D"]
 
+[node name="Clouds-bg" type="Sprite2D" parent="."]
+position = Vector2(658, 466)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_5wvej")
+
 [node name="Wall" parent="." instance=ExtResource("1_h7xjw")]
 position = Vector2(229.504, -63.7447)
+scale = Vector2(2, 2)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+position = Vector2(102.748, 328.372)
 polygon = PackedVector2Array(-168.504, -30, -30.5043, 53.7447, 215.496, 33.7447, 367, -7, 530, -7, 530, -129.255, 675.496, -134.255, 679.496, 259.745, -433.504, 272.745, -444.504, -210.255, -305, -196.255, -305, -30)
