@@ -1,17 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://cg37n5dpxr0in"]
+[gd_scene load_steps=3 format=3 uid="uid://cg37n5dpxr0in"]
+
+[ext_resource type="Script" path="res://scripts/npc.gd" id="1_l0k4o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xp0a"]
 size = Vector2(45.3553, 45.3553)
 
 [node name="Npc" type="CharacterBody2D" groups=["entity", "npc"]]
 collision_layer = 4
+script = ExtResource("1_l0k4o")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="NpcSprite" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -31.9289)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4xp0a")
 
 [node name="SelectionSprite" type="Sprite2D" parent="."]

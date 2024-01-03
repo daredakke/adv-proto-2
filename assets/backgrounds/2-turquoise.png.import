@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvtbjky50pfrp"
-path="res://.godot/imported/clouds-bg.png-7e4be175f949240a66d521b586faf434.ctex"
+uid="uid://w0own55r25en"
+path="res://.godot/imported/2-turquoise.png-acb505cd1682d52838cb9fa74d5ee3d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/clouds-bg.png"
-dest_files=["res://.godot/imported/clouds-bg.png-7e4be175f949240a66d521b586faf434.ctex"]
+source_file="res://assets/backgrounds/2-turquoise.png"
+dest_files=["res://.godot/imported/2-turquoise.png-acb505cd1682d52838cb9fa74d5ee3d6.ctex"]
 
 [params]
 

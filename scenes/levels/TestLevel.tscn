@@ -1,14 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://ncgd2ml5k4k8"]
+[gd_scene load_steps=6 format=3 uid="uid://ncgd2ml5k4k8"]
 
-[ext_resource type="Texture2D" uid="uid://bvtbjky50pfrp" path="res://assets/clouds-bg.png" id="1_5wvej"]
 [ext_resource type="PackedScene" uid="uid://by8tmk3or5jk7" path="res://scenes/wall.tscn" id="1_h7xjw"]
+[ext_resource type="PackedScene" uid="uid://bfktkoaa1ow57" path="res://scenes/background.tscn" id="1_jts1m"]
+[ext_resource type="Texture2D" uid="uid://w0own55r25en" path="res://assets/backgrounds/2-turquoise.png" id="3_jgngh"]
+[ext_resource type="Texture2D" uid="uid://ba4rpuksntvnd" path="res://assets/backgrounds/4-seablue.jpg" id="3_m5c8l"]
+[ext_resource type="Texture2D" uid="uid://fgol5fppoqih" path="res://assets/backgrounds/1-mintgreen.png" id="4_5t2x0"]
 
 [node name="TestLevel" type="Node2D"]
 
-[node name="Clouds-bg" type="Sprite2D" parent="."]
-position = Vector2(658, 466)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("1_5wvej")
+[node name="Background" parent="." instance=ExtResource("1_jts1m")]
+follow_viewport_enabled = false
+base_texture = ExtResource("3_m5c8l")
+middle_texture = ExtResource("4_5t2x0")
+top_texture = ExtResource("3_jgngh")
+middle_rotation = 0.1
+top_rotation = -0.05
 
 [node name="Wall" parent="." instance=ExtResource("1_h7xjw")]
 position = Vector2(229.504, -63.7447)

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfktkoaa1ow57"]
+
+[ext_resource type="Script" path="res://scripts/background.gd" id="1_18gn6"]
+[ext_resource type="Shader" path="res://scripts/shaders/pixelate.gdshader" id="2_iyw3o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_27gr7"]
+shader = ExtResource("2_iyw3o")
+shader_parameter/amount = 300
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5am6b"]
+shader = ExtResource("2_iyw3o")
+shader_parameter/amount = 300
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_blhl0"]
+shader = ExtResource("2_iyw3o")
+shader_parameter/amount = 300
+
+[node name="Background" type="CanvasLayer"]
+layer = -100
+follow_viewport_enabled = true
+script = ExtResource("1_18gn6")
+
+[node name="Base" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_27gr7")
+
+[node name="Middle" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_5am6b")
+
+[node name="Top" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_blhl0")
