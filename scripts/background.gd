@@ -11,36 +11,30 @@ extends CanvasLayer
 @export var top_texture: Texture2D
 
 @export_category("TextureSize")
-@export var width: int = 2200
-@export var height: int = 2200
+@export var texture_width: int = 2200
+@export var texture_height: int = 2200
 
 @export_category("Rotation")
-@export_range(-3, 3) var base_rotation: float = 0.05
-@export_range(-3, 3) var middle_rotation: float = 0.25
-@export_range(-3, 3) var top_rotation: float = -0.25
+@export_range(-250, 250) var base_rotation: float = 10
+@export_range(-250, 250) var middle_rotation: float = 30
+@export_range(-250, 250) var top_rotation: float = -20
 
 
 func _ready() -> void:
 	if base_texture:
-		base.texture = base_texture
-		base.scale = scale_sprite(base, width, height)
-		centre_sprite(base)
+		set_background_sprite(base, base_texture, texture_width, texture_height)
 	
 	if middle_texture:
-		middle.texture = middle_texture
-		middle.scale = scale_sprite(middle, width, height)
-		centre_sprite(middle)
+		set_background_sprite(middle, middle_texture, texture_width, texture_height)
 	
 	if top_texture:
-		top.texture = top_texture
-		top.scale = scale_sprite(top, width, height)
-		centre_sprite(top)
+		set_background_sprite(top, top_texture, texture_width, texture_height)
 
 
 func _process(delta: float) -> void:
-	base.rotation_degrees += base_rotation
-	middle.rotation_degrees += middle_rotation
-	top.rotation_degrees += top_rotation
+	base.rotation_degrees += base_rotation * delta
+	middle.rotation_degrees += middle_rotation * delta
+	top.rotation_degrees += top_rotation * delta
 
 
 func set_background_sprite(

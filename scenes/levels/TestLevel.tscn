@@ -13,8 +13,9 @@ follow_viewport_enabled = false
 base_texture = ExtResource("3_m5c8l")
 middle_texture = ExtResource("4_5t2x0")
 top_texture = ExtResource("3_jgngh")
-middle_rotation = 0.1
-top_rotation = -0.05
+base_rotation = 5.0
+middle_rotation = 15.0
+top_rotation = -5.0
 
 [node name="Wall" parent="." instance=ExtResource("1_h7xjw")]
 position = Vector2(229.504, -63.7447)
