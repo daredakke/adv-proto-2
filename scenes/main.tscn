@@ -7,13 +7,13 @@
 [node name="Main" type="Node2D"]
 
 [node name="TestLevel" parent="." instance=ExtResource("1_2q5bj")]
-position = Vector2(-19, 52)
+position = Vector2(-110, -355)
 
 [node name="Player" parent="." instance=ExtResource("2_gn4rn")]
-position = Vector2(836, 688)
+position = Vector2(836, 714)
 
 [node name="Camera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_fjrcb")]
-position = Vector2(836, 624)
+position = Vector2(836, 650)
 position_smoothing_enabled = true
 position_smoothing_speed = 6.0
 target = NodePath("../Player")
