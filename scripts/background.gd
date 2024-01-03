@@ -29,7 +29,6 @@ func _ready() -> void:
 	if middle_texture:
 		middle.texture = middle_texture
 		middle.scale = scale_sprite(middle, width, height)
-		middle.get_rect()
 		centre_sprite(middle)
 	
 	if top_texture:
@@ -42,6 +41,17 @@ func _process(delta: float) -> void:
 	base.rotation_degrees += base_rotation
 	middle.rotation_degrees += middle_rotation
 	top.rotation_degrees += top_rotation
+
+
+func set_background_sprite(
+		sprite: Sprite2D, 
+		texture: Texture2D, 
+		width: float, 
+		height: float
+	) -> void:
+	sprite.texture = texture
+	sprite.scale = scale_sprite(sprite, width, height)
+	centre_sprite(sprite)
 
 
 func centre_sprite(sprite: Sprite2D) -> void:
