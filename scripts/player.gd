@@ -30,7 +30,7 @@ func _process(_delta: float) -> void:
 	
 	# Show visual indication that an NPC can be interacted with
 	if closest_entity:
-		closest_entity.is_selected(true)
+		closest_entity.selection_sprite.show()
 	
 	# Talk to an NPC
 	if Input.is_action_just_pressed("action") and closest_entity:
@@ -44,7 +44,7 @@ func find_closest_entity() -> Variant:
 	var closest_entity_distance: float
 	
 	for entity in get_tree().get_nodes_in_group("entity"):
-		entity.is_selected(false)
+		entity.selection_sprite.hide()
 		
 		var current_entity_distance = interaction_point.global_position.distance_to(entity.global_position)
 		

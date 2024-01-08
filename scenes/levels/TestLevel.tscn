@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ncgd2ml5k4k8"]
+[gd_scene load_steps=11 format=3 uid="uid://ncgd2ml5k4k8"]
 
 [ext_resource type="PackedScene" uid="uid://by8tmk3or5jk7" path="res://scenes/wall.tscn" id="1_h7xjw"]
 [ext_resource type="PackedScene" uid="uid://bfktkoaa1ow57" path="res://scenes/background.tscn" id="1_jts1m"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://fgol5fppoqih" path="res://assets/backgrounds/1-mintgreen.png" id="4_5t2x0"]
 [ext_resource type="Texture2D" uid="uid://dhf5qavf47mcf" path="res://assets/test-level/terrain-rock-arranged.png" id="5_j21st"]
 [ext_resource type="Shader" path="res://scripts/shaders/pixelate.gdshader" id="5_ymisn"]
+[ext_resource type="PackedScene" uid="uid://cg37n5dpxr0in" path="res://scenes/npc.tscn" id="7_ndk5v"]
+[ext_resource type="Texture2D" uid="uid://bqpyyw2qbgaag" path="res://assets/entities/npc.png" id="8_4i4y8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cuucx"]
 shader = ExtResource("5_ymisn")
@@ -43,6 +45,12 @@ position = Vector2(346, 166)
 rotation = 4.71239
 texture = ExtResource("5_j21st")
 flip_v = true
+
+[node name="Npcs" type="Node2D" parent="."]
+
+[node name="TestNpc" parent="Npcs" instance=ExtResource("7_ndk5v")]
+position = Vector2(275, 839)
+npc_texture = ExtResource("8_4i4y8")
 
 [node name="Wall" parent="." instance=ExtResource("1_h7xjw")]
 position = Vector2(229.504, -63.7447)
